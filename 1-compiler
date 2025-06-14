@@ -1,0 +1,4 @@
+#!/bin/bash
+# Bu skript C proqramını kompilyasiya edir
+
+cc $CFILE -o main
