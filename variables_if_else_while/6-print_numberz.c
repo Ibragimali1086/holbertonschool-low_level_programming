@@ -1,17 +1,19 @@
 #include <stdio.h>
 
 /**
- * main - Prints numbers from 0 to 9 without using char variables
+ * main - Prints digits 0 to 9 without using char variables
  *
- * Return: Always 0
+ * Return: Always 0 (Success)
  */
 int main(void)
 {
-    int i;
+    int i = 0;
 
-    for (i = 0; i < 10; i++)
-        putchar(48 + i);  // ASCII 48 = '0'
-
+    while (i < 10)
+    {
+        putchar(i + '0');
+        i++;
+    }
     putchar('\n');
     return (0);
 }
