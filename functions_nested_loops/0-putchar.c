@@ -1,9 +1,9 @@
 #include "main.h"
 
 /**
- * main - _putchar sözünü çap edir, sonra yeni sətrə keçir
+ * main - Entry point
  *
- * Return: 0 (uğurla bitir)
+ * Return: Always 0 (Success)
  */
 int main(void)
 {
@@ -16,6 +16,6 @@ int main(void)
     _putchar('a');
     _putchar('r');
     _putchar('\n');
+
     return (0);
 }
-
