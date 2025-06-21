@@ -1,5 +1,5 @@
 #include "main.h"
-#include<stdio.h>
+#include <stdio.h>
 
 /**
  * main - check the code
@@ -12,3 +12,4 @@ int main(void)
 	printf("%d\n", mul(-402, 4096));
 	return (0);
 }
+
