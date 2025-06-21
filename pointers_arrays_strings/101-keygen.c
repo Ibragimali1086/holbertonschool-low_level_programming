@@ -2,36 +2,27 @@
 #include <stdlib.h>
 #include <time.h>
 
+/**
+ * main - generates a random valid password for 101-crackme
+ *
+ * Return: Always 0
+ */
 int main(void)
 {
-    char password[7];
-    int i, sum = 0, diff;
-    
+    int sum = 0;
+    char c;
+
     srand(time(NULL));
-    
-    for (i = 0; i < 6; i++)
-    {
-        password[i] = 33 + rand() % 94;  // printable ASCII characters from '!' to '~'
-        sum += password[i];
-    }
-    password[6] = '\0';
 
-    diff = 2772 - sum;  // 2772 is a special sum required by the crackme
-
-    for (i = 0; i < 6; i++)
+    while (sum < 2772)
     {
-        if (diff <= 126 - password[i])
-        {
-            password[i] += diff;
+        c = rand() % 94 + 33; /* ASCII 33 to 126 */
+        if (sum + c > 2772)
             break;
-        }
-        else
-        {
-            diff -= 126 - password[i];
-            password[i] = 126;
-        }
+        sum += c;
+        putchar(c);
     }
-    
-    printf("%s\n", password);
+
+    putchar(2772 - sum); /* Add the last char to make sum 2772 */
     return (0);
 }
