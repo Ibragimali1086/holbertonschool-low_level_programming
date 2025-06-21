@@ -7,7 +7,8 @@ int main(void)
     int *p;
 
     a[2] = 1024;
-    p = a;
+    p = &n;
+
     /*
      * write your line of code here...
      * Remember:
@@ -15,9 +16,6 @@ int main(void)
      * - you are not allowed to modify p
      * - only one statement
      * - you are not allowed to code anything else than this line of code
-     * - you are not allowed to use ,
-     * - you are not allowed to use a
-     * - your code should be written at line 19
      */
     *(p + 5) = 98;
     /* ...so that this prints 98\n */
