@@ -1,7 +1,6 @@
 #ifndef MAIN_H
 #define MAIN_H
 
-int _putchar(char c);
-void print_square(int n);
+/* Header file for Holberton projects */
 
 #endif /* MAIN_H */
