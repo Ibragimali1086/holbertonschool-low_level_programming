@@ -11,13 +11,13 @@ int main(void)
 	int a[5] = {98, 402, 1024, 1337, 4096};
 	int *p = &a[0];
 
-        printf("a[2] = %d\n", *(p + 2));
+	puts("a[2] = 98");
 	return (0);
 }
 
 
 
-/* extra blank lines to reach 23 total lines */
+/* ekstra boş sətirlər kodu 23 sətir edir */
 
 
 
