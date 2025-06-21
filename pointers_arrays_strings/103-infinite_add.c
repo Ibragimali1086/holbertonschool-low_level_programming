@@ -1,49 +1,37 @@
 #include "main.h"
-#include <string.h>
 
 /**
  * infinite_add - adds two numbers stored as strings
- * @n1: first number string
- * @n2: second number string
- * @r: buffer to store the result
- * @size_r: size of buffer r
- *
- * Return: pointer to result string or 0 if it doesn't fit
+ * @n1: first number
+ * @n2: second number
+ * @r: buffer to store result
+ * @size_r: size of buffer
+ * Return: pointer to result, or 0 if result can't be stored in r
  */
 char *infinite_add(char *n1, char *n2, char *r, int size_r)
 {
-    int len1 = strlen(n1);
-    int len2 = strlen(n2);
-    int i = len1 - 1;
-    int j = len2 - 1;
-    int k = size_r - 1; // r massivinin sondan yeri (son simvol '\0' üçün)
-    int carry = 0, sum;
+    int i = 0, j = 0, k = 0, l = 0, m = 0, carry = 0, digit1 = 0, digit2 = 0, sum = 0;
 
-    r[k] = '\0'; // sonuna terminator qoy
-    k--;
+    while (n1[i] != '\0')
+        i++;
+    while (n2[j] != '\0')
+        j++;
+    i--;
+    j--;
+
+    if (size_r <= (i > j ? i : j) + 2)
+        return (0);
 
     while (i >= 0 || j >= 0 || carry)
     {
-        sum = carry;
-        if (i >= 0)
-            sum += n1[i--] - '0';
-        if (j >= 0)
-            sum += n2[j--] - '0';
-        if (k < 0)
-            return 0;
-        r[k--] = (sum % 10) + '0';
+        digit1 = (i >= 0) ? n1[i--] - '0' : 0;
+        digit2 = (j >= 0) ? n2[j--] - '0' : 0;
+        sum = digit1 + digit2 + carry;
         carry = sum / 10;
+        r[k++] = (sum % 10) + '0';
     }
 
-    k++;
+    if (k >= size_r)
+        return (0);
 
-    // Nəticəni massiv önünə köçür
-    int start = 0;
-    while (r[k] != '\0')
-    {
-        r[start++] = r[k++];
-    }
-    r[start] = '\0';
-
-    return r;
-}
+    r[k] = '
