@@ -1,6 +1,7 @@
 #ifndef MAIN_H
 #define MAIN_H
 
-/* Header file for Holberton projects */
+int _putchar(char c);
+void print_triangle(int size);
 
 #endif /* MAIN_H */
