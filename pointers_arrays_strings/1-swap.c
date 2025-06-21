@@ -1,9 +1,3 @@
-/**
- * File: 1-swap.c
- * Author: Your Name
- * Description: Function that swaps the values of two integers.
- */
-
 #include "main.h"
 
 /**
@@ -11,8 +5,7 @@
  * @a: pointer to first integer
  * @b: pointer to second integer
  *
- * Description: This function swaps the values stored at the
- * memory locations pointed to by @a and @b.
+ * Return: void
  */
 void swap_int(int *a, int *b)
 {
