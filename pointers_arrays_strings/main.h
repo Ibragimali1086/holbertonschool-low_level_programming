@@ -3,4 +3,4 @@
 
 char *_strchr(char *s, char c);
 
-#endif
+#endif /* MAIN_H */
