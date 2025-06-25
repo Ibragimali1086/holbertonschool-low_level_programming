@@ -6,12 +6,12 @@
  */
 void print_chessboard(char (*a)[8])
 {
-	int i, j;
+    int i, j;
 
-	for ( i=0 ; i<8 ; i++ );
-	{
-		for ( j=0 ; j<8 ; j++ );
-			_putchar(a[i][j]);
-		_putchar('\n');
-	}
+    for (i = 0; i < 8; i++) /* satır üçün */
+    {
+        for (j = 0; j < 8; j++) /* sütun üçün */
+            _putchar(a[i][j]); /* element çap et */
+        _putchar('\n'); /* hər satırdan sonra yeni sətir */
+    }
 }
